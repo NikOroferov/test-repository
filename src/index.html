@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Фильмотека</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
@@ -21,25 +21,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <img
-      srcset="./images/header_desc.jpg 1x, ./images/header_desc@2x.jpg 2x"
-      src="./images/header_desc.jpg"
-      alt="альт" >
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__box">
 
-    </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
-
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
+            <p class="logo__title">
+              <svg class="logo__icon">
+                <use href="./images/icons.svg#icon-logo"></use>
+              </svg>
+              Filmoteka
+            </p>
+          
+            <form class="search__form">
+              <input type="text" class="search__text">
+              <button class="search__btn">
+                <svg class="search__logo">
+                  <use href="./images/icons.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+            
+            <form class="library_form">
+              <button class="home__btn">Home</button>
+              <button class="library__btn">My Library</button>
+            </form>
+            
+          </div>
+        </div>
+      </header>
+    
+      <main class="main">
+        <div class="container">
+          <ul class="film__list"></ul>
+        </div>
+      </main>
+      
+      <footer class="footer">
+        <div class="container">
+          <p class="footer__info">
+            © 2020 | All Rights Reserved | Developed with
+            <svg class="footer__logo">
+              <use href="./images/icons.svg#icon-heart"></use>
+            </svg>
+            by GoIT Students
+          </p>
+        </div>
+      </footer>
+    </div>
+    
+  <script src="./index.js"></script>
   </body>
 </html>
