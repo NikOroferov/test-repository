@@ -22,7 +22,7 @@
   font-weight: 500;
   font-size: 30px;
   line-height: 1.16;
-  margin-right: 91px;
+  margin-right: 90px;
 }
 
 .logo__icon {
@@ -48,7 +48,6 @@
   @include flex-center;
   width: 20px;
   height: 20px;
-  // padding: 4px;
   background-color: transparent;
   cursor: pointer;
   border-bottom: 0.5px solid #ffffff;
